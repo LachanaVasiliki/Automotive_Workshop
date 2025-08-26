@@ -1,0 +1,113 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #2c3e50;
+  color: white;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+header nav {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+header nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.main-nav {
+  background: #34495e;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.main-nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.messages {
+  max-width: 800px;
+  margin: 15px auto;
+  padding: 0;
+  list-style: none;
+}
+
+.messages li {
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.messages li.error {
+  background: #fceaea;
+  color: #c0392b;
+  border: 1px solid #e74c3c;
+}
+
+.messages li.success {
+  background: #e8f8f5;
+  color: #27ae60;
+  border: 1px solid #2ecc71;
+}
+
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+.welcome-section {
+  text-align: center;
+}
+
+.welcome-section h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #2980b9;
+}
+
+.welcome-section p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 0 10px;
+  background-color: #2980b9;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1f618d;
+}

@@ -1,0 +1,8 @@
+## user_edit.html
+{% extends 'base.html' %}
+{% block content %}
+<h2>Edit User</h2>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit">Save</button></form>
+<a href="{% url 'index' %}" class="btn btn-primary mt-3">Back</a>
+
+{% endblock %}

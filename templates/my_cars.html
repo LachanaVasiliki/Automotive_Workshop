@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Τα Αυτοκίνητά Μου</h1>
+
+{% if cars %}
+    <ul>
+    {% for car in cars %}
+        <li>
+            {{ car.make }} {{ car.model }} ({{ car.serial_number }})<br>
+            Τύπος: {{ car.type }}, Καύσιμο: {{ car.fuel_type }}<br>
+            Πόρτες: {{ car.doors }}, Τροχοί: {{ car.wheels }}<br>
+            Έτος Κατασκευής: {{ car.production_date }}, Απόκτηση: {{ car.acquisition_year }}
+        </li>
+        <hr>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Δεν έχεις καταχωρημένα οχήματα.</p>
+{% endif %}
+<a href="{% url 'index' %}" class="btn btn-primary mt-3">Back</a>
+
+{% endblock %}

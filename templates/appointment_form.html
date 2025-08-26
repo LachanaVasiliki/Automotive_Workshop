@@ -1,8 +1,0 @@
-## appointment_form.html
-{% extends 'base.html' %}
-{% block content %}
-<h2>{% if appointment %}Edit Appointment{% else %}New Appointment{% endif %}</h2>
-<form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit">Submit</button></form>
-<a href="{% url 'index' %}" class="btn btn-primary mt-3">Back</a>
-
-{% endblock %}

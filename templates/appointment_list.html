@@ -1,7 +1,0 @@
-## appointment_list.html
-{% extends 'base.html' %}
-{% block content %}
-<h2>Appointments</h2>
-<ul>{% for a in appointments %}<li>{{ a.date }} {{ a.time }} - {{ a.get_status_display }}</li>{% endfor %}</ul>
-<a href="{% url 'index' %}" class="btn btn-primary mt-3">Back</a>
-{% endblock %}

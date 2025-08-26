@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Search Appointments</h2>
+  <form method="get">
+    <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search by surname, AFM, or status">
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+    {% for appointment in appointments %}
+      <li>{{ appointment.date }} {{ appointment.hour }} – {{ appointment.client.last_name }} (AFM: {{ appointment.client.afm }}) – {{ appointment.status }}</li>
+    {% empty %}
+      <li>No appointments found.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

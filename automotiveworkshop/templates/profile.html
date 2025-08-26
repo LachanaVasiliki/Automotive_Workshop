@@ -1,0 +1,12 @@
+## profile.html
+{% extends 'base.html' %}
+{% block content %}
+<h2>Profile</h2>
+<p>Name: {{ user.get_full_name }}</p>
+<p>Username: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Role: {{ user.role }}</p>
+<a href="{% url 'edit_profile' %}">Edit</a>
+<a href="{% url 'index' %}" class="btn btn-primary mt-3">Back</a>
+
+{% endblock %}
